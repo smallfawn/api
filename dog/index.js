@@ -243,7 +243,7 @@ let soul = [
 '你发朋友圈说你想吃铜锣烧，半夜我起来给你买，送到你家楼下我跟你打电话，你气喘吁吁的跟我说你在跑步，可我看到你房间的灯还亮着，我懂了，可能是你不想麻烦我吧！'
 ];
 
-function randomSoul(min = 0, max = 242) {
+function randomSoul(min = 0, max = 243) {
   return Math.min(Math.floor(min + Math.random() * (max - min)), max);
 }
-randomSoul()
+const Soulapi = soul[randomSoul(0, soul.length)];
