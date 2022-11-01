@@ -243,9 +243,7 @@ let soul = [
 '你发朋友圈说你想吃铜锣烧，半夜我起来给你买，送到你家楼下我跟你打电话，你气喘吁吁的跟我说你在跑步，可我看到你房间的灯还亮着，我懂了，可能是你不想麻烦我吧！'
 ];
 
-function randomSoul(){
-	content = soul[Math.floor(Math.random() * soul.length)];
-	document.getElementsByTagName('article')[0].innerHTML = content.replace(/\*\*(.*?)\*\*/g,'<mark>$1</mark>');
-	document.getElementsByTagName('section')[0].className = 'border-' + randomNumBoth(1,6);
+function randomSoul(min = 0, max = 242) {
+  return Math.min(Math.floor(min + Math.random() * (max - min)), max);
 }
-
+randomSoul()
